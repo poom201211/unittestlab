@@ -1,6 +1,6 @@
-# Test cases 
+# Test cases for methods 
 ---
-## countUnique
+## countUnique()
 
 | Tests             | Expected Value              | 
 | ----------------- |:---------------------------:|
@@ -9,7 +9,7 @@
 | testEmpty()       | return 0                    | 
 | testNull()        | return NullPointerException |
 
-## binarySearch
+## binarySearch()
 
 | Tests                 | Expected Value              | 
 | --------------------  |:---------------------------:|
