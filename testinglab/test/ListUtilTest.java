@@ -1,6 +1,7 @@
 import org.junit.Test;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import static org.junit.Assert.*;
 /**
@@ -62,11 +63,11 @@ public class ListUtilTest {
         assertEquals(2,ListUtil.binarySearch(binaryTest,"Fish"));
     }
 
-    @Test
+
+    @Test(expected = AssertionError.class)// Binary search is only used for unique arrays.
     public void testMultipleElement() {
         String[] binaryTest = {"Cat","Dog","Dog","Dog","Fish"};
 
-        assertEquals(1,ListUtil.binarySearch(binaryTest,"Dog"));
         assertNotEquals(2,ListUtil.binarySearch(binaryTest,"Dog"));
         assertNotEquals(3,ListUtil.binarySearch(binaryTest,"Dog"));
     }

@@ -35,11 +35,28 @@ public class ListUtil {
     public static <T extends Comparable<? super T>> int binarySearch(T[] array, T element){
         if(element == null)throw new IllegalArgumentException("Search element must not be null");
 
-        for(int i = 0; i < array.length; i++){
-            if(array[i] == element){
-                return i;
+        int low = 0;
+        int high = array.length-1;
+        int index = Integer.MAX_VALUE; // Set to store values that is parsed in.
+
+        while(low <= high){
+            int mid = (high + low) / 2;
+            if(array[mid].compareTo(element) > 0){
+                high = mid - 1;
+            }
+            else if(array[mid].compareTo(element) < 0){
+                low = mid + 1;
+            }
+            else if(array[mid].compareTo(element) == 0){
+                index = mid;
+                break;
             }
         }
-        return -1;
+
+        if(index == Integer.MAX_VALUE){
+            return -1;
+        }
+
+        return index;
     }
 }

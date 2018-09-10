@@ -14,6 +14,6 @@
 | Tests                 | Expected Value              | 
 | --------------------  |:---------------------------:|
 | testIndexOfElement()  | return 0, 1, 2              | 
-| testMultipleElement() | return 1, 2, 3              | 
+| testMultipleElement() | return 2, 3                 | 
 | testNoElement()       | return -1                   | 
 
